@@ -146,7 +146,6 @@ app/config/config.php
 
 # Themes, modules and overrides
 
-modules/*
 override/*
 themes/*/
 themes/classic
@@ -214,3 +213,14 @@ tools/build/releases/*
 # Docker configuration
 install.lock
 docker-compose.override.yml
+
+# CUSTOM EDIT
+
+# Custom Modules (Track only your custom modules)
+modules/*
+!modules/custommodule/
+
+# Ensure Composer dependencies are installed but not tracked
+/vendor/
+!composer.json
+!composer.lock

@@ -1,3 +1,42 @@
+gitignore
+--------
+Je oproti puvodni Prestashop8 upraven pro lepsi praci s nasim GIT workflow.
+
+Composer
+--------
+composer.json a .lock musi byt trackovan.
+Pro zvyseni verze balicku nebo doinstalovani balicku je nutne spustit composer prikazy a updatovane composer files pushnout do repozitare.
+Samotne balicky at uz ve vendor nebo modules (viz odstavec nize) nesmi byt trackvany v GIT.
+
+Moduly
+--------
+Adresarova struktura:
+---
+/modules/* - vendor (composer balicky i manualne nahrane; netrekuje se v GIT)
+/modules/_custom/* - vlastni moduly (GIT submoduly; netrekuje se v GIT)
+
+Vlastni modul/custom
+---
+Vzdy ma svuj vlastni repozitar (jakakoliv uprava per shop novy)
+Pouzije se GIT submodul do adresare modules/_custom/
+
+Vendor/marketplace
+---
+Pokud jsou instalovatelne pres composer, staci pridat pres nej a nemusi tak byt trackovany v GIT - automaticky se naistaluji do /modules
+Pokud nejsou pres composer je nutne je donahrat manualne, take ale nebudou trackovany... je treba doplnit readme o jejich seznam
+Pokud mame vendor modul, ktery chceme overridnout nebo upravit vlastnim kodem, musime mu vytvorit repo a to pak GIT submodulem pridat do custom modulu, stejne jako u modulu vlastniho
+
+Theme
+---
+Neprepisujeme theme ale overidujeme pres tzv. child theme.
+Hlavni theme je stahnuty pres composer, takze se netrackuje v GIT. (pokud to tak neni, tak podobne jak s moduly - manualne a poznamka v readme). Dulezite je zachovat hlavni theme netknuty.
+
+Pro upravy vyuzijeme tzv. child theme, jehoz soubory jiz v GIT trackujeme
+
+...
+
+Nasleduje originalni Prestashop 8 README:
+
 About PrestaShop
 --------
 
