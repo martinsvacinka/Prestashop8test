@@ -1,6 +1,6 @@
 gitignore
 --------
-Je oproti puvodni Prestashop8 upraven pro lepsi praci s nasim GIT workflow.
+Je oproti puvodni Prestashop8 upraven pro lepsi praci s nasi GIT strukturou.
 
 Composer
 --------
