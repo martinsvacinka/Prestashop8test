@@ -218,7 +218,8 @@ docker-compose.override.yml
 
 # Custom Modules (Track only your custom modules)
 modules/*
-!modules/custommodule/
+!modules/_custom/
+!modules/_custom/**
 
 # Ensure Composer dependencies are installed but not tracked
 /vendor/

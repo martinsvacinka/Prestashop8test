@@ -1,3 +1,3 @@
-[submodule "modules/_custom/custommodule"]
-	path = modules/_custom/custommodule
+[submodule "modules/_custom/Prestashop8test-custom-module"]
+	path = modules/_custom/Prestashop8test-custom-module
 	url = https://github.com/martinsvacinka/Prestashop8test-custom-module.git
